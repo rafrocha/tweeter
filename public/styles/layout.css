@@ -5,9 +5,10 @@
  */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /*
@@ -15,10 +16,22 @@ html {
  */
 
 body {
+  height: 100%;
   margin: 0;
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+main.container {
+  width: 450px;
+  background-color: white;
+  height: 100%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: -80px;
 }
 
 /*
