@@ -1,8 +1,8 @@
 section.new-tweet {
-  background-color: lightgrey;
+  background-color: #D7DCE1;
   position: relative;
-  margin: 4em 2em;
-  width: 85%;
+  margin: 4em 2em 0 2em;
+  flex-basis: 450px;
   padding: 10px;
   border-radius: 7px;
 }
@@ -22,3 +22,60 @@ span.counter {
   float: right;
   position: relative;
 }
+
+article {
+  border: solid;
+  border-width: thin;
+  border-color: #D7DCE1;
+  position: relative;
+  margin: 2em;
+  flex-basis: 450px;
+  border-radius: 9px;
+}
+
+span.tweetName{
+  float:left;
+  padding-left: 10px
+}
+
+header span.at{
+  float: right;
+  font-size: 15px;
+  font-weight: normal;
+  color: #878C90;
+
+}
+
+header h3 {
+  background-color: #D7DCE1;
+  margin: 0;
+  padding: 10px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  height: 75px;
+}
+
+section.tweet p{
+  height: 80px;
+  padding: 10px;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+article footer p{
+  padding: 10px;
+  margin: 0;
+  border-top: solid;
+  border-top-width: thin;
+  border-top-color: lightgrey;
+  font-size: 12px;
+}
+
+img {
+  float:left;
+  height: 100%;
+  border-radius: 10px;
+}
+
+

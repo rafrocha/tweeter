@@ -30,8 +30,10 @@ main.container {
   margin: 80px auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  align-content:flex-start;
   margin-bottom: -80px;
+  flex-wrap: wrap;
 }
 
 /*

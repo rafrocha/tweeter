@@ -18,6 +18,9 @@
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/app.js"></script>
+
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 </head>
 
 <body>
@@ -31,12 +34,42 @@
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <span id="chars" class="counter">140</span>
       </form>
     </section>
+    <article>
+      <header>
+      <h3 class="header"><img src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png"><span class="tweetName">Raf Rocha</span><span class="at">@rrocha</span> </h3>
+    </header>
+    <section class="tweet">
+      <p> Hello there </p>
+    </section>
+    <footer>
+      <p> 5 days ago </p>
+    </footer>
+    </article>
   </main>
 </body>
+
+<!-- <script>
+//   $(document).ready(function() {
+//   // --- our code goes here ---
+//   console.log("DOM is ready");
+// });
+
+var maxLength = 140;
+$('textarea').on('change keyup paste', function() {
+  let length = $(this).val().length;
+  let newlength = maxLength - length;
+  $('#chars').text(newlength);
+});
+
+</script> -->
+
+
+
+
 
 </html>
