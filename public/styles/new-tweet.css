@@ -1,4 +1,4 @@
-section.new-tweet {
+main.container section.new-tweet {
   background-color: #D7DCE1;
   position: relative;
   margin: 4em 2em 0 2em;
@@ -7,15 +7,19 @@ section.new-tweet {
   border-radius: 7px;
 }
 
-h2 {
+.new-tweet h2 {
   margin: 0px 0px 20px 0px;
   border-bottom: solid;
   border-bottom-width: thin;
 }
 
-textarea{
+.new-tweet textarea{
   width: 100%;
   padding: 5px;
+}
+
+.over-limit {
+  color: red;
 }
 
 span.counter {
@@ -23,9 +27,13 @@ span.counter {
   position: relative;
 }
 
-article {
+#tweet-container{
+  flex-basis: 450px;
+}
+
+#tweet-container article.tweet {
   border: solid;
-  border-width: thin;
+  border-width: 2px;
   border-color: #D7DCE1;
   position: relative;
   margin: 2em;
@@ -33,13 +41,17 @@ article {
   border-radius: 9px;
 }
 
-article:hover header h3{
+article.tweet:hover header h3{
   opacity: 1;
 }
 
-article:hover{
-  border-color: grey;
+#tweet-container article.tweet:hover{
+  border-color: gray;
   box-shadow: 0 0 0.5px 0;
+}
+
+article.tweet:hover footer .icons{
+  display: inline-block;
 }
 
 span.tweetName{
@@ -47,7 +59,7 @@ span.tweetName{
   padding-left: 10px
 }
 
-header span.at{
+article.tweet header span.at{
   float: right;
   font-size: 15px;
   font-weight: normal;
@@ -55,7 +67,7 @@ header span.at{
 
 }
 
-header h3 {
+article.tweet header h3 {
   background-color: #D7DCE1;
   margin: 0;
   padding: 10px;
@@ -66,7 +78,7 @@ header h3 {
 }
 
 
-section.tweet p{
+article.tweet section p{
   height: 80px;
   padding: 10px;
   margin: 0;
@@ -75,7 +87,7 @@ section.tweet p{
   color: #244751;
 }
 
-article footer{
+article.tweet footer{
   padding: 10px;
   margin: 0;
   border-top: solid;
@@ -84,13 +96,13 @@ article footer{
   font-size: 12px;
 }
 
-img {
+article.tweet header img {
   float:left;
   height: 100%;
   border-radius: 10px;
 }
 
-footer span.icons{
+article.tweet footer span.icons{
   float: right;
   display: none;
   color: #55A2DC;

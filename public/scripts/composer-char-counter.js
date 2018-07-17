@@ -1,20 +1,16 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  let maxLength = 140;
-  $('textarea').on('change keyup paste', function() {
-    let length = $(this).val().length;
-    let newlength = maxLength - length;
+  const maxLength = 140;
+  $('textarea').on('input', function() {
+    const counter = $(this).siblings('.counter');
+    const length = $(this).val().length;
+    const newlength = maxLength - length;
+    const errorClass = 'over-limit';
+    counter.text(newlength);
     if (newlength < 0) {
-      $('#chars').text(newlength).css('color', 'red');
+      counter.addClass(errorClass);
     } else {
-      $('#chars').text(newlength);
+      counter.removeClass(errorClass);
     }
   });
   console.log("DOM is ready");
-
-  $("article").hover(function() {
-    $("footer span.icons").show();
-  }, function() {
-    $("footer span.icons").hide();
-  });
 });
