@@ -14,7 +14,7 @@ $(document).ready(function() {
 function renderTweets(tweets) {
     tweets.forEach(tweet => {
       let $tweet = createTweetElement(tweet);
-      $('#tweet-container').append($tweet);
+      $('#tweet-container').prepend($tweet);
     })
   }
 
@@ -52,16 +52,24 @@ loadTweets('/tweets');
 
   $("form").on('submit', function(event) {
     event.preventDefault();
-    if( $('textarea').val('') || $('textarea').val().length > 140){
-      alert('Invalid tweet!');
+    if($('textarea').val() === ''){
+      alert('Empty tweet!');
       return;
-    }
+    } else if ($('textarea').val().length > 140){
+      alert('Your tweet is too long!!');
+      return;
+    } else {
     $.ajax({
       method: "POST",
       url: '/tweets',
-      data: $('form').serialize()
+      data: $('form').serialize(),
+      success: function (response){
+        $("#tweet-container").empty();
+          loadTweets('/tweets');
+      }
     })
     $('textarea').val('');
+  }
   });
 
 
