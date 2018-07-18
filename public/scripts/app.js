@@ -11,25 +11,25 @@
 $(document).ready(function() {
 
 
-function renderTweets(tweets) {
+  function renderTweets(tweets) {
     tweets.forEach(tweet => {
       let $tweet = createTweetElement(tweet);
       $('#tweet-container').prepend($tweet);
     })
   }
 
-  function loadTweets(url){
+  function loadTweets(url) {
     console.log('Button clicked, performing ajax call...');
     $.ajax({
-          url: url,
-          method: "GET",
-          success: function(response){
-            renderTweets(response);
-          }
-        });
-}
+      url: url,
+      method: "GET",
+      success: function(response) {
+        renderTweets(response);
+      }
+    });
+  }
 
-loadTweets('/tweets');
+  loadTweets('/tweets');
 
 
   function createTweetElement(tweet) {
@@ -52,25 +52,36 @@ loadTweets('/tweets');
 
   $("form").on('submit', function(event) {
     event.preventDefault();
-    if($('textarea').val() === ''){
+    if ($('textarea').val() === '') {
       alert('Empty tweet!');
       return;
-    } else if ($('textarea').val().length > 140){
+    } else if ($('textarea').val().length > 140) {
       alert('Your tweet is too long!!');
       return;
     } else {
-    $.ajax({
-      method: "POST",
-      url: '/tweets',
-      data: $('form').serialize(),
-      success: function (response){
-        $("#tweet-container").empty();
-          loadTweets('/tweets');
-      }
-    })
-    $('textarea').val('');
-  }
+      $.ajax({
+        method: "POST",
+        url: '/tweets',
+        data: $('form').serialize(),
+        success: function(tweets) {
+          renderTweets([tweets]);
+          // $("#tweet-container").empty();
+          // loadTweets('/tweets');
+        }
+      })
+      $('textarea').val('');
+      $('.counter').text('140');
+      loadTweets('/tweets');
+    }
   });
+
+$("button.btn").click(function () {
+  console.log('hello');
+    $(this).parent().siblings().children('.new-tweet').slideToggle("fast");
+
+});
+
+
 
 
 

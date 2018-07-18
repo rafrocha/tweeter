@@ -22,3 +22,26 @@ nav {
   font-size: 2em;
   line-height: 2.5;
 }
+
+.btn{
+  float: right;
+  padding: 20px 10px 20px 10px;
+  margin: 1%;
+  border-radius: 7px;
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  background-color: #E6F7EF;
+  color: #00a087;
+  font-size: 20px;
+}
+
+.btn:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+

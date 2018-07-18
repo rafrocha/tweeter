@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet" />
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <!-- Navbar CSS -->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
-  <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
 
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 
-</head>
+  </head>
 
-<body>
-  <!-- Top nav bar (fixed) -->
-  <nav id="nav-bar">
-    <img class="logo" src="/images/bird.png">
-    <span class="header">Tweeter</span>
-  </nav>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form>
-        <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
-      </form>
-    </section>
-    <section id="tweet-container">
-    <!-- New Tweets go here! -->
-  </section>
-  </main>
-</body>
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-bar">
+      <img class="logo" src="/images/bird.png">
+      <span class="header">Tweeter</span>
+      <button id="#btn" class="btn" type="button"><span><i class="fas fa-edit"></i> Compose</span></button>
+    </nav>
+    <!-- Page-specific (main) content here -->
+    <main id="new-tweet" class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id="tweet-container">
+      <!-- New Tweets go here! -->
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const maxLength = 140;
-  $('textarea').on('input', function() {
+  $('textarea').on('input change paste keyup', function() {
     const counter = $(this).siblings('.counter');
     const length = $(this).val().length;
     const newlength = maxLength - length;

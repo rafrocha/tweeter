@@ -26,6 +26,7 @@ main.container {
   background-color: white;
   height: 100%;
   margin: 80px auto;
+  padding-top: 4em;
   display: flex;
   justify-content: center;
   /*align-items: flex-start;*/
