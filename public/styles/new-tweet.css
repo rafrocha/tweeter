@@ -114,6 +114,7 @@ article.tweet section p {
   display: table-cell;
   vertical-align: middle;
   color: #244751;
+  word-wrap: break-word;
 }
 
 article.tweet footer {

@@ -9,27 +9,26 @@ module.exports = function makeDataHelpers(db) {
 
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
+        db.collection("tweets").insertOne(newTweet);
         callback(null, true);
-      });
     },
 
+    // Deletes tweet in 'db'
     deleteTweet: function(id){
-    var removeIndex = db.tweets.map(function(item) { return item.id; })
-                       .indexOf(id);
+    // var removeIndex = db.collection("tweets").find().map(function(item) { return item.id; })
+    //                    .indexOf(id);
 
-    ~removeIndex && db.tweets.splice(removeIndex, 1);
-      console.log(db.tweets);
+    // ~removeIndex && db.tweets.splice(removeIndex, 1);
+    //   console.log(db.tweets);
+    let idDel = id;
+    db.collection("tweets").remove({ id: idDel });
     },
 
-    // Get all tweets in `db`, sorted by newest first
+    // Get all tweets in `db`
     getTweets: function(callback) {
-      simulateDelay(() => {
-        const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        callback(null, db.tweets.sort(sortNewestFirst));
-      });
+        db.collection("tweets").find().toArray(callback);
+        // const sortNewestFirst = (a, b) => a.created_at - b.created_at;
+        // callback(null, tweets.sort(sortNewestFirst));
     }
-
   };
 }
