@@ -37,6 +37,7 @@ $(document).ready(function() {
     let header = $(`<header><h3><img src=${tweet.user.avatars.small}><span class='tweetName'>${tweet.user.name}</span><span class='at'>${tweet.user.handle}</span></h3>`);
     let sectionParagraph = $(`<section><p>${tweet.content.text}</p></section>`);
     let footer = $(`<footer>
+      <form class="delete"><input id="date" type="submit" value="Delete"></form>
       <span class="day">${moment(tweet.created_at).fromNow()}</span>
       <span class="icons">
         <i class="fas fa-flag"></i>
@@ -50,7 +51,7 @@ $(document).ready(function() {
     return $article;
   }
 
-  $("form").on('submit', function(event) {
+  $("form.oink").on('submit', function(event) {
     event.preventDefault();
     let errorContainer = $(this).siblings('.error-container');
     console.log($('textarea').val())
@@ -86,13 +87,20 @@ $(document).ready(function() {
     }
   });
 
+  // $("form.delete").on('submit', function(event){
+  //   let date = $(this).siblings(".day");
+  //   console.log(date);
+  //   event.preventDefault();
+  //   // let date = $(this).siblings(".day");
+  //   // console.log(date);
+  // })
+
 $("button.btn").click(function () {
     $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function(){
       $(this).children('form').children('textarea').focus();
     });
 
 });
-
 
 
 });
