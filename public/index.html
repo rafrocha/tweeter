@@ -29,20 +29,23 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
+
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
-      <span class="header">Tweeter</span>
-      <button id="#btn" class="btn" type="button"><span><i class="fas fa-edit"></i> Compose</span></button>
+      <span class="header">oinker</span>
+      <img class="logo" src="/images/pig.png">
+      <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> Compose</span></button>
     </nav>
     <!-- Page-specific (main) content here -->
-    <main id="new-tweet" class="container">
+    <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2>Oink!</h2>
         <form>
           <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <button id="tweetbtn" type="submit"><i class="fas fa-pencil-alt"></i></button>
           <span class="counter">140</span>
         </form>
+        <section class="error-container">
+        </section>
       </section>
       <section id="tweet-container">
       <!-- New Tweets go here! -->

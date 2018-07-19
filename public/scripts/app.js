@@ -52,11 +52,21 @@ $(document).ready(function() {
 
   $("form").on('submit', function(event) {
     event.preventDefault();
+    let errorContainer = $(this).siblings('.error-container');
+    console.log($('textarea').val())
     if ($('textarea').val() === '') {
-      alert('Empty tweet!');
+      errorContainer.text('Empty tweet!');
+      if (errorContainer.is(":visible")){
+        return;
+      }
+      errorContainer.show("fast");
       return;
     } else if ($('textarea').val().length > 140) {
-      alert('Your tweet is too long!!');
+      errorContainer.text('Too many characters! No books please! :)');
+      if (errorContainer.is(":visible")){
+        return;
+      }
+      errorContainer.slideToggle("fast");
       return;
     } else {
       $.ajax({
@@ -64,24 +74,24 @@ $(document).ready(function() {
         url: '/tweets',
         data: $('form').serialize(),
         success: function(tweets) {
-          renderTweets([tweets]);
-          // $("#tweet-container").empty();
-          // loadTweets('/tweets');
+          // renderTweets([tweets]);
+          $("#tweet-container").empty();
+          loadTweets('/tweets');
         }
       })
+      errorContainer.slideToggle("fast");
       $('textarea').val('');
       $('.counter').text('140');
-      loadTweets('/tweets');
+      // loadTweets('/tweets');
     }
   });
 
 $("button.btn").click(function () {
-  console.log('hello');
-    $(this).parent().siblings().children('.new-tweet').slideToggle("fast");
+    $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function(){
+      $(this).children('form').children('textarea').focus();
+    });
 
 });
-
-
 
 
 
