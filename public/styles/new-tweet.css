@@ -7,6 +7,11 @@ main.container section.new-tweet {
   border-radius: 7px;
 }
 
+:focus{
+  outline-style: none;
+  outline-color: transparent;
+}
+
 .new-tweet section.error-container{
   display: none;
 }
@@ -19,6 +24,7 @@ main.container section.new-tweet {
   border-radius: 5px;
   border-color: white;
 }
+
 
 #tweetbtn{
   border-radius: 25px;
@@ -129,6 +135,10 @@ article.tweet footer span.icons {
   float: right;
   display: none;
   color: #55A2DC;
+}
+article.tweet footer button:hover{
+  cursor: pointer;
+  color: red;
 }
 
 @media all and (max-width:450px){

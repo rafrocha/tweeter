@@ -15,6 +15,14 @@ module.exports = function makeDataHelpers(db) {
       });
     },
 
+    deleteTweet: function(id){
+    var removeIndex = db.tweets.map(function(item) { return item.id; })
+                       .indexOf(id);
+
+    ~removeIndex && db.tweets.splice(removeIndex, 1);
+      console.log(db.tweets);
+    },
+
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
       simulateDelay(() => {

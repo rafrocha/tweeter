@@ -37,7 +37,7 @@ $(document).ready(function() {
     let header = $(`<header><h3><img src=${tweet.user.avatars.small}><span class='tweetName'>${tweet.user.name}</span><span class='at'>${tweet.user.handle}</span></h3>`);
     let sectionParagraph = $(`<section><p>${tweet.content.text}</p></section>`);
     let footer = $(`<footer>
-      <form class="delete"><input id="date" type="submit" value="Delete"></form>
+      <form class="del"><button id="${tweet.id}" type="submit"><i class="far fa-trash-alt"></i></button></form>
       <span class="day">${moment(tweet.created_at).fromNow()}</span>
       <span class="icons">
         <i class="fas fa-flag"></i>
@@ -87,19 +87,36 @@ $(document).ready(function() {
     }
   });
 
-  // $("form.delete").on('submit', function(event){
-  //   let date = $(this).siblings(".day");
-  //   console.log(date);
-  //   event.preventDefault();
-  //   // let date = $(this).siblings(".day");
-  //   // console.log(date);
-  // })
+$('#tweet-container').on('submit', function(event){
+  event.preventDefault();
+  let form = event.target;
+  let id = $(form).children().attr('id');
+  console.log(id);
+  $.ajax({
+      method: "DELETE",
+      url: '/tweets/'+ id,
+      success: function(tweets) {
+          // renderTweets([tweets]);
+          $("#tweet-container").empty();
+          loadTweets('/tweets');
+        }
+    })
+});
+
+
 
 $("button.btn").click(function () {
     $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function(){
       $(this).children('form').children('textarea').focus();
     });
 
+});
+
+$('input,textarea').focus(function(){
+   $(this).data('placeholder',$(this).attr('placeholder'))
+          .attr('placeholder','');
+}).blur(function(){
+   $(this).attr('placeholder',$(this).data('placeholder'));
 });
 
 

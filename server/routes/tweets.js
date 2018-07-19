@@ -5,6 +5,13 @@ const escapeHTML    = require('escape-html');
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
+function generateRandomString() {
+  let text = "";
+  let possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+  for (let i = 0; i < 6; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  return text;
+}
 module.exports = function(DataHelpers) {
 
   tweetsRoutes.get("/", function(req, res) {
@@ -16,6 +23,13 @@ module.exports = function(DataHelpers) {
       }
     });
   });
+
+  tweetsRoutes.delete("/:id", function(req, res){
+    let id = req.params.id;
+    DataHelpers.deleteTweet(id);
+    res.sendStatus(202);
+  });
+
 
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
@@ -29,7 +43,8 @@ module.exports = function(DataHelpers) {
       content: {
         text: escapeHTML(req.body.text)
       },
-      created_at: Date.now()
+      created_at: Date.now(),
+      id: generateRandomString()
     };
 
     DataHelpers.saveTweet(tweet, (err) => {

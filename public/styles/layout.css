@@ -10,9 +10,6 @@ html {
   box-sizing: border-box;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   margin: 0;
@@ -29,7 +26,6 @@ main.container {
   padding-top: 4em;
   display: flex;
   justify-content: center;
-  /*align-items: flex-start;*/
   align-content:flex-start;
   flex-wrap: wrap;
 }
@@ -45,7 +41,3 @@ main.container {
     background-color:white;
   }
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
