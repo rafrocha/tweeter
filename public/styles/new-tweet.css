@@ -154,6 +154,10 @@ footer button {
   color: white;
   border-color: #de4939;
 }
+footer form.del{
+  float:left;
+  margin-right: 1.5em;
+}
 
 article.tweet footer button:hover {
   color: red;

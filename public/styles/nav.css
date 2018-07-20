@@ -13,12 +13,31 @@ nav {
   border-bottom-left-radius: 150px;
 }
 
+
 #nav-bar .forms-wrapper{
   padding: 15px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 div.forms-wrapper input{
   border-radius: 5px;
+}
+
+form .log-link:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+form .reg-link:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+
+span.or{
+  margin-left:10px;
+  margin-right:10px;
 }
 
 .loginbtn, .registerbtn{
@@ -42,6 +61,16 @@ div.forms-wrapper input{
   line-height: 1.8;
   font-family: 'Chewy', cursive;
   font-size: 3em;
+}
+
+#nav-bar .header:hover {
+  text-shadow:
+  1px 0px 0px black,
+  -1px 0px 0px black,
+  0px 1px 0px black,
+  0px -1px 0px black;
+  cursor: pointer;
+  color: white;
 }
 
 .btn{
@@ -74,7 +103,10 @@ div.forms-wrapper input{
   background-color: white;
   color: black;
   cursor: pointer;
+}
 
+.logo:hover{
+  cursor: pointer;
 }
 
 @media all and (max-width:414px){

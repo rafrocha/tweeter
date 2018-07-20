@@ -103,7 +103,13 @@ $(document).ready(function() {
     })
   });
 
+  $( ".logo" ).click(function() {
+    location.reload(true);
+  });
 
+  $( "nav span.header" ).click(function() {
+    location.reload(true);
+  });
 
   $("button.btn").click(function() {
     $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function() {
