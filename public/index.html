@@ -22,8 +22,9 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/login-register.js"></script>
 
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </head>
 
@@ -32,6 +33,27 @@
     <nav id="nav-bar">
       <span class="header">oinker!</span>
       <img class="logo" src="/images/pig.png">
+
+      <!-- Hidden DIV, will use it for stretch Login -->
+      <div hidden class ="forms-wrapper">
+      <form class="login">
+        <i id="login-icon" class="fas fa-user"></i>
+        <div class="loginfo">
+          <input id="user" type="text" name="username" placeholder="user">
+          <input id="logpassword" type="password" name="password" placeholder="Password">
+          <button type="submit" class="loginbtn">login</button>
+        </div>
+      </form>
+     <form class="register">
+      <i id="register-icon" class="fas fa-user-plus"></i>
+      <div class="reginfo">
+        <input id="newuser" type="text" name="newusername" placeholder="new username">
+        <input id="regpassword" type="password" name="password" placeholder="new password">
+      <button type="submit" class="registerbtn">join us!</button>
+        </div>
+        </form>
+      </div>
+
       <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> Compose</span></button>
     </nav>
 
