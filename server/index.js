@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 // Basic express setup:
-const PORT = process.env.mongodb || 8080;
+const PORT = process.env.PORT || 8080;
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
