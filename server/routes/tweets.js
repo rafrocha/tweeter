@@ -4,6 +4,12 @@ const userHelper    = require("../lib/util/user-helper")
 const escapeHTML    = require('escape-html');
 const express       = require('express');
 const tweetsRoutes  = express.Router();
+const cookieSession = require('cookie-session')
+// const bcrypt = require('bcrypt');
+
+tweetsRoutes.use(cookieSession({
+  keys: ['secret']
+}));
 
 function generateRandomString() {
   let text = "";

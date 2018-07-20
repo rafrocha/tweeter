@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <title>Tweeter - Home Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet" />
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <!-- Navbar CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+<head>
+  <title>Tweeter - Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/login-register.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
 
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <script type="text/javascript" src="/scripts/login-register.js"></script>
-
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-  </head>
-
-  <body>
-
-    <nav id="nav-bar">
-      <div class="wrap-logo">
+<body>
+  <nav id="nav-bar">
+    <div class="wrap-logo">
       <span class="header">oinker!</span>
       <img class="logo" src="/images/pig.png">
     </div>
 
-      <!-- Hidden DIV, will use it for stretch Login -->
-      <div class ="forms-wrapper">
+    <!-- Hidden DIV, will use it for stretch Login -->
+    <div class="forms-wrapper">
       <form class="login">
         <i id="login-icon" class="fas fa-user"></i>
         <span class="log-link">Welcome back?</span>
@@ -49,34 +42,35 @@
         </div>
       </form>
       <span class="or">OR </span>
-     <form class="register">
-      <span class="reg-link"> New Oinker </span>
-      <i id="register-icon" class="fas fa-user-plus"></i>
-      <div hidden class="reginfo">
-        <input id="newuser" type="text" name="newusername" placeholder="new username">
-        <input id="regpassword" type="password" name="password" placeholder="new password">
-      <button type="submit" class="registerbtn">join us!</button>
+      <form class="register">
+        <span class="reg-link"> New Oinker </span>
+        <i id="register-icon" class="fas fa-user-plus"></i>
+        <div hidden class="reginfo">
+          <input id="newuser" type="text" name="newusername" placeholder="new username">
+          <input id="regpassword" type="password" name="password" placeholder="new password">
+          <button type="submit" class="registerbtn">join us!</button>
         </div>
-        </form>
-      </div>
+      </form>
+    </div>
 
-      <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> ...</span></button>
-    </nav>
 
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Oink!</h2>
-        <form class="oink" id="23">
-          <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
-          <button id="tweetbtn" type="submit"><i class="fas fa-pencil-alt"></i></button>
-          <span class="counter">140</span>
-        </form>
-        <section class="error-container">
-        </section>
+    <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> ...</span></button>
+  </nav>
+  <main class="container">
+    <section class="new-tweet">
+      <h2>Oink!</h2>
+      <form class="oink" id="23">
+        <textarea id="mytextarea" name="text" placeholder="What are you humming about?"></textarea>
+        <button id="tweetbtn" type="submit"><i class="fas fa-pencil-alt"></i></button>
+        <span class="counter">140</span>
+      </form>
+      <section class="error-container">
       </section>
-      <section id="tweet-container">
+    </section>
+    <section id="tweet-container">
       <!-- New Tweets go here! -->
-      </section>
-    </main>
-  </body>
+    </section>
+  </main>
+</body>
+
 </html>

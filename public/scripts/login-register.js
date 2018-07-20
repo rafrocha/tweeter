@@ -1,52 +1,29 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 
-// $("#login-icon").click(function() {
-//   let parent = $(this).parent();
-//     if(parent.siblings().is(":visible")){
-//       $(this).siblings().hide();
-//     } else {
-//   parent.siblings().show();
-//   siblings().show();
-// }
-//   });
+$(".log-link").click(function() {
+  let parent = $(this).parent();
+    if(parent.siblings().is(":visible")){
+      $(this).siblings().hide();
+    } else {
+  parent.siblings().show();
+  siblings().show();
+}
+  });
 
-// $("#register-icon").click(function() {
-//   let parent = $(this).parent();
-//     if(parent.siblings().is(":visible")){
-//       $(this).siblings().hide();
-//     } else if() {
-//   parent.siblings().show();
-//   siblings().show();
-// }
-//   });
-
-// $("#loginLink").click(function(event) {
-//       event.preventDefault();
-//       $(".overlay").fadeToggle("fast");
-//     });
-
-//     $(".close").click(function() {
-//       $(".overlay").fadeToggle("fast");
-//     });
-
-// });
+$(".reg-link").click(function() {
+  let parent = $(this).parent();
+    if(parent.siblings().is(":visible")){
+      $(this).siblings().hide();
+    } else if() {
+  parent.siblings().show();
+  siblings().show();
+}
+  });
 
 
+});
 
 
-//   const maxLength = 140;
-//   $('textarea').on('input change paste keyup', function() {
-//     const counter = $(this).siblings('.counter');
-//     const length = $(this).val().length;
-//     const newlength = maxLength - length;
-//     const errorClass = 'over-limit';
-//     counter.text(newlength);
-//     if (newlength < 0) {
-//       counter.addClass(errorClass);
-//     } else {
-//       counter.removeClass(errorClass);
-//     }
-//   });
 
 
 
@@ -57,15 +34,12 @@
 //   res.render("urls_login", templateVars);
 // });
 
-// app.get("/register", (req, res) => {
-//   let templateVars = { urls: urlDatabase, user: users[req.session.user_id], user_id: req.session.user_id };
-//   res.render("urls_register", templateVars);
-// });
 
 // app.post("/login", (req, res) => {
 //   let emailExists = false;
 //   let email = req.body.email;
 //   let password = req.body.password;
+//    FUNCAO LOGIN
 //   let validEmailID = "";
 //   for (var keys in users) {
 //     if (users[keys].email === email) {
