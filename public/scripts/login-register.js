@@ -1,35 +1,35 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-$("#login-icon").click(function() {
-  let parent = $(this).parent();
-    if(parent.siblings().is(":visible")){
-      $(this).siblings().hide();
-    } else {
-  parent.siblings().show();
-  siblings().show();
-}
-  });
+// $("#login-icon").click(function() {
+//   let parent = $(this).parent();
+//     if(parent.siblings().is(":visible")){
+//       $(this).siblings().hide();
+//     } else {
+//   parent.siblings().show();
+//   siblings().show();
+// }
+//   });
 
-$("#register-icon").click(function() {
-  let parent = $(this).parent();
-    if(parent.siblings().is(":visible")){
-      $(this).siblings().hide();
-    } else if() {
-  parent.siblings().show();
-  siblings().show();
-}
-  });
+// $("#register-icon").click(function() {
+//   let parent = $(this).parent();
+//     if(parent.siblings().is(":visible")){
+//       $(this).siblings().hide();
+//     } else if() {
+//   parent.siblings().show();
+//   siblings().show();
+// }
+//   });
 
-$("#loginLink").click(function(event) {
-      event.preventDefault();
-      $(".overlay").fadeToggle("fast");
-    });
+// $("#loginLink").click(function(event) {
+//       event.preventDefault();
+//       $(".overlay").fadeToggle("fast");
+//     });
 
-    $(".close").click(function() {
-      $(".overlay").fadeToggle("fast");
-    });
+//     $(".close").click(function() {
+//       $(".overlay").fadeToggle("fast");
+//     });
 
-});
+// });
 
 
 
