@@ -77,10 +77,11 @@ div.forms-wrapper input{
 
 }
 
-@media all and (max-width:450px){
+@media all and (max-width:414px){
   nav {
     padding-right:15px;
     padding-left: 15px;
+    width:414px;
   }
   .button-text{
     display: none;

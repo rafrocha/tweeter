@@ -29,13 +29,13 @@ main.container {
   flex-wrap: wrap;
 }
 
-@media all and (max-width:450px){
+@media all and (max-width:414px){
   main.container{
     width:100%;
   }
 }
 
-@media all and (max-width: 585px){
+@media all and (max-width: 414px){
   body{
     background-color:white;
   }
