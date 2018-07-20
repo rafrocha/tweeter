@@ -1,5 +1,5 @@
 main.container section.new-tweet {
-  background-color: #BBBDF6;
+  background-color: #a18ed8;
   position: relative;
   margin: 1em 0em 0em 0em;
   flex-basis: 380px;
@@ -7,40 +7,41 @@ main.container section.new-tweet {
   border-radius: 7px;
 }
 
-:focus{
+:focus {
   outline-style: none;
   outline-color: transparent;
 }
 
-.new-tweet section.error-container{
+.new-tweet section.error-container {
   display: none;
 }
 
-.show-error{
+.show-error {
   display: block;
 }
 
-#mytextarea{
+#mytextarea {
   border-radius: 5px;
   border-color: white;
 }
 
 
-#tweetbtn{
+#tweetbtn {
   border-radius: 25px;
-  background-color: #BBBDF6;
-  border-color: #BBBDF6;
+  background-color: #a18ed8;
+  border-color: #a18ed8;
 }
 
-#tweetbtn:hover{
-  cursor: pointer;
+#tweetbtn:hover {
   color: green;
+  cursor: pointer;
 }
 
 .new-tweet h2 {
   margin: 0px 0px 20px 0px;
   border-bottom: solid;
   border-bottom-width: thin;
+  color: white;
 }
 
 .new-tweet textarea {
@@ -106,6 +107,9 @@ article.tweet header h3 {
   opacity: .6;
 }
 
+article.tweet section {
+  word-wrap: break-word;
+}
 
 article.tweet section p {
   height: 80px;
@@ -114,7 +118,6 @@ article.tweet section p {
   display: table-cell;
   vertical-align: middle;
   color: #244751;
-  word-wrap: break-word;
 }
 
 article.tweet footer {
@@ -124,6 +127,8 @@ article.tweet footer {
   border-top-width: thin;
   border-top-color: lightgrey;
   font-size: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 article.tweet header img {
@@ -137,13 +142,8 @@ article.tweet footer span.icons {
   display: none;
   color: #55A2DC;
 }
-article.tweet footer button:hover{
-  cursor: pointer;
+
+article.tweet footer button:hover {
   color: red;
+  cursor: pointer;
 }
-
-@media all and (max-width:450px){
-
-}
-
-

@@ -37,9 +37,9 @@ $(document).ready(function() {
     let header = $(`<header><h3><img src=${tweet.user.avatars.small}><span class='tweetName'>${tweet.user.name}</span><span class='at'>${tweet.user.handle}</span></h3>`);
     let sectionParagraph = $(`<section><p>${tweet.content.text}</p></section>`);
     let footer = $(`<footer>
-      <form class="del"><button id="${tweet.id}" type="submit"><i class="far fa-trash-alt"></i></button></form>
       <span class="day">${moment(tweet.created_at).fromNow()}</span>
       <span class="icons">
+        <form class="del"><button id="${tweet.id}" type="submit"><i class="far fa-trash-alt"></i></button></form>
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
         <i class="fas fa-heart"></i>
@@ -57,14 +57,14 @@ $(document).ready(function() {
     console.log($('textarea').val())
     if ($('textarea').val() === '') {
       errorContainer.text('Empty tweet!');
-      if (errorContainer.is(":visible")){
+      if (errorContainer.is(":visible")) {
         return;
       }
       errorContainer.show("fast");
       return;
     } else if ($('textarea').val().length > 140) {
       errorContainer.text('Too many characters! No books please! :)');
-      if (errorContainer.is(":visible")){
+      if (errorContainer.is(":visible")) {
         return;
       }
       errorContainer.slideToggle("fast");
@@ -87,37 +87,37 @@ $(document).ready(function() {
     }
   });
 
-$('#tweet-container').on('submit', function(event){
-  event.preventDefault();
-  let form = event.target;
-  let id = $(form).children().attr('id');
-  console.log(id);
-  $.ajax({
+  $('#tweet-container').on('submit', function(event) {
+    event.preventDefault();
+    let form = event.target;
+    let id = $(form).children().attr('id');
+    console.log(id);
+    $.ajax({
       method: "DELETE",
-      url: '/tweets/'+ id,
+      url: '/tweets/' + id,
       success: function(tweets) {
-          // renderTweets([tweets]);
-          $("#tweet-container").empty();
-          loadTweets('/tweets');
-        }
+        // renderTweets([tweets]);
+        $("#tweet-container").empty();
+        loadTweets('/tweets');
+      }
     })
-});
+  });
 
 
 
-$("button.btn").click(function () {
-    $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function(){
+  $("button.btn").click(function() {
+    $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function() {
       $(this).children('form').children('textarea').focus();
     });
 
-});
+  });
 
-$('input,textarea').focus(function(){
-   $(this).data('placeholder',$(this).attr('placeholder'))
-          .attr('placeholder','');
-}).blur(function(){
-   $(this).attr('placeholder',$(this).data('placeholder'));
-});
+  $('input,textarea').focus(function() {
+    $(this).data('placeholder', $(this).attr('placeholder'))
+      .attr('placeholder', '');
+  }).blur(function() {
+    $(this).attr('placeholder', $(this).data('placeholder'));
+  });
 
 
 });

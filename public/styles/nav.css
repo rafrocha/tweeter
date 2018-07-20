@@ -10,7 +10,7 @@ nav {
   display: flex;
   justify-content: space-around;
   border-bottom-right-radius: 150px;
-    border-bottom-left-radius: 150px;
+  border-bottom-left-radius: 150px;
 }
 
 #nav-bar .logo{
@@ -27,15 +27,16 @@ nav {
 #nav-bar .header {
   float: left;
   margin-left: 10px;
-  font-size: 2em;
-  line-height: 2.5;
+  line-height: 1.8;
+  font-family: 'Chewy', cursive;
+  font-size: 3em;
 }
 
 .btn{
   float: right;
   padding: 10px 10px 10px 10px;
   margin: 15px 5px 15px 5px;
-  border-radius: 7px;
+  border-radius: 50% 20% / 10% 40%;
   border: solid;
   border-width: thin;
   border-color: black;
@@ -43,16 +44,25 @@ nav {
   color: #6761A8;
   font-size: 20px;
   height: 50px;
+   transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
 }
 
 #bars{
   display: none;
+   transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
 }
 
 .btn:hover{
   background-color: white;
   color: black;
   cursor: pointer;
+
 }
 
 @media all and (max-width:450px){
@@ -61,12 +71,18 @@ nav {
   }
   .button-text{
     display: none;
+     transition: all 1s;
   }
   #bars{
     display: inline-block;
+     transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
   }
   .btn{
     padding:10px;
+    transition: all 1s;
   }
 }
 
