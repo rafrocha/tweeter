@@ -54,7 +54,6 @@ $(document).ready(function() {
   $("form.oink").on('submit', function(event) {
     event.preventDefault();
     let errorContainer = $(this).siblings('.error-container');
-    console.log($('textarea').val())
     if ($('textarea').val() === '') {
       errorContainer.text('Empty tweet!');
       if (errorContainer.is(":visible")) {
@@ -91,7 +90,6 @@ $(document).ready(function() {
     event.preventDefault();
     let form = event.target;
     let id = $(form).children().attr('id');
-    console.log(id);
     $.ajax({
       method: "DELETE",
       url: '/tweets/' + id,

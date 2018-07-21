@@ -30,33 +30,34 @@
       <img class="logo" src="/images/pig.png">
     </div>
 
-    <!-- Hidden DIV, will use it for stretch Login -->
-    <div class="forms-wrapper">
+
+
+    <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> Say it!</span></button>
+  </nav>
+  <main class="container">
+    <span class="welcome-text">Welcome piggy!</span>
+     <!-- Hidden DIV, will use it for stretch Login -->
+     <div hidden class="forms-wrapper">
       <form class="login">
         <i id="login-icon" class="fas fa-user"></i>
         <span class="log-link">Welcome back?</span>
-        <div hidden class="loginfo">
+        <div class="loginfo">
           <input id="user" type="text" name="username" placeholder="user">
           <input id="logpassword" type="password" name="password" placeholder="Password">
           <button type="submit" class="loginbtn">login</button>
         </div>
       </form>
-      <span class="or">OR </span>
       <form class="register">
-        <span class="reg-link"> New Oinker </span>
         <i id="register-icon" class="fas fa-user-plus"></i>
-        <div hidden class="reginfo">
+        <span class="reg-link"> New Oinker </span>
+        <div class="reginfo">
           <input id="newuser" type="text" name="newusername" placeholder="new username">
           <input id="regpassword" type="password" name="password" placeholder="new password">
           <button type="submit" class="registerbtn">join us!</button>
         </div>
       </form>
     </div>
-
-
-    <button class="btn" type="button"><i id="bars" class="fa fa-bars" aria-hidden="true"></i><span class="button-text"><i class="fa fa-comment" aria-hidden="true"></i> ...</span></button>
-  </nav>
-  <main class="container">
+    <!-- Hidden flex item above for stretch login. -->
     <section class="new-tweet">
       <h2>Oink!</h2>
       <form class="oink" id="23">

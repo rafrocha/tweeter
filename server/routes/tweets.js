@@ -1,9 +1,9 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
-const escapeHTML    = require('escape-html');
-const express       = require('express');
-const tweetsRoutes  = express.Router();
+const userHelper = require("../lib/util/user-helper")
+const escapeHTML = require('escape-html');
+const express = require('express');
+const tweetsRoutes = express.Router();
 const cookieSession = require('cookie-session')
 // const bcrypt = require('bcrypt');
 
@@ -30,7 +30,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.delete("/:id", function(req, res){
+  tweetsRoutes.delete("/:id", function(req, res) {
     let id = req.params.id;
     DataHelpers.deleteTweet(id);
     res.sendStatus(202);
@@ -39,7 +39,7 @@ module.exports = function(DataHelpers) {
 
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
-      res.status(400).json({ error: 'invalid request: no data in POST body'});
+      res.status(400).json({ error: 'invalid request: no data in POST body' });
       return;
     }
 

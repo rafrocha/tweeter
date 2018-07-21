@@ -16,6 +16,24 @@ main.container section.new-tweet {
   display: none;
 }
 
+div.forms-wrapper {
+  width: 380px;
+}
+
+form.login {
+  margin-bottom: 15px;
+}
+
+span.welcome-text {
+  font-family: 'Chewy', cursive;
+  color: lightpink;
+  font-size: 35px;
+  text-shadow: 1px 0px 0px black,
+  -1px 0px 0px black,
+  0px 1px 0px black,
+  0px -1px 0px black;
+}
+
 .show-error {
   display: block;
 }
@@ -42,8 +60,7 @@ main.container section.new-tweet {
   border-bottom: solid;
   border-bottom-width: thin;
   color: white;
-  text-shadow:
-  1px 0px 0px black,
+  text-shadow: 1px 0px 0px black,
   -1px 0px 0px black,
   0px 1px 0px black,
   0px -1px 0px black;
@@ -154,8 +171,9 @@ footer button {
   color: white;
   border-color: #de4939;
 }
-footer form.del{
-  float:left;
+
+footer form.del {
+  float: left;
   margin-right: 1.5em;
 }
 

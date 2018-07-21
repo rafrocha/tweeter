@@ -14,44 +14,41 @@ nav {
 }
 
 
-#nav-bar .forms-wrapper{
+#nav-bar .forms-wrapper {
   padding: 15px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-div.forms-wrapper input{
-  border-radius: 5px;
-}
-
-form .log-link:hover{
-  cursor:pointer;
+form .log-link:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 
-form .reg-link:hover{
-  cursor:pointer;
+form .reg-link:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 
 
-span.or{
-  margin-left:10px;
-  margin-right:10px;
+span.or {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.loginbtn, .registerbtn{
+.loginbtn,
+.registerbtn {
   border-radius: 10px;
 }
 
-#nav-bar .logo{
+#nav-bar .logo {
   width: 80px;
   height: 80px;
-  float:left;
-  padding:10px;
+  float: left;
+  padding: 10px;
 }
 
-#nav-bar div{
+#nav-bar div {
   margin-left: 5px;
 }
 
@@ -64,8 +61,7 @@ span.or{
 }
 
 #nav-bar .header:hover {
-  text-shadow:
-  1px 0px 0px black,
+  text-shadow: 1px 0px 0px black,
   -1px 0px 0px black,
   0px 1px 0px black,
   0px -1px 0px black;
@@ -73,7 +69,7 @@ span.or{
   color: white;
 }
 
-.btn{
+.btn {
   float: right;
   padding: 10px 10px 10px 10px;
   margin: 15px 5px 15px 5px;
@@ -85,53 +81,49 @@ span.or{
   color: #6761A8;
   font-size: 20px;
   height: 50px;
-   transition: all .25s linear;
+  transition: all .25s linear;
   -o-transition: all .25s linear;
   -moz-transition: all .25s linear;
   -webkit-transition: all .25s linear;
 }
 
-#bars{
+#bars {
   display: none;
-   transition: all .25s linear;
+  transition: all .25s linear;
   -o-transition: all .25s linear;
   -moz-transition: all .25s linear;
   -webkit-transition: all .25s linear;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   cursor: pointer;
 }
 
-@media all and (max-width:414px){
+@media all and (max-width:414px) {
   nav {
-    padding-right:15px;
+    padding-right: 15px;
     padding-left: 15px;
-    width:414px;
+    width: 414px;
   }
-  .button-text{
+  .button-text {
     display: none;
-     transition: all 1s;
+    transition: all 1s;
   }
-  #bars{
+  #bars {
     display: inline-block;
-     transition: all .25s linear;
-  -o-transition: all .25s linear;
-  -moz-transition: all .25s linear;
-  -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
   }
-  .btn{
-    padding:10px;
+  .btn {
+    padding: 10px;
     transition: all 1s;
   }
 }
-
-
-
-
