@@ -1,3 +1,4 @@
+//Character counter for box.
 $(document).ready(function() {
   const maxLength = 140;
   $('textarea').on('input change paste keyup', function() {

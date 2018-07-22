@@ -51,6 +51,7 @@ $(document).ready(function() {
     return $article;
   }
 
+  //Form submission on tweet box. Submits and loads new tweet.
   $("form.oink").on('submit', function(event) {
     event.preventDefault();
     let errorContainer = $(this).siblings('.error-container');
@@ -74,7 +75,6 @@ $(document).ready(function() {
         url: '/tweets',
         data: $('form').serialize(),
         success: function(tweets) {
-          // renderTweets([tweets]);
           $("#tweet-container").empty();
           loadTweets('/tweets');
         }
@@ -82,10 +82,10 @@ $(document).ready(function() {
       errorContainer.slideToggle("fast");
       $('textarea').val('');
       $('.counter').text('140');
-      // loadTweets('/tweets');
     }
   });
 
+  //Delete button functionality.
   $('#tweet-container').on('submit', function(event) {
     event.preventDefault();
     let form = event.target;
@@ -94,13 +94,13 @@ $(document).ready(function() {
       method: "DELETE",
       url: '/tweets/' + id,
       success: function(tweets) {
-        // renderTweets([tweets]);
         $("#tweet-container").empty();
         loadTweets('/tweets');
       }
     })
   });
 
+  //Logo and name click refreshes the page
   $( ".logo" ).click(function() {
     location.reload(true);
   });
@@ -109,6 +109,7 @@ $(document).ready(function() {
     location.reload(true);
   });
 
+  //Say it button hides tweet box.
   $("button.btn").click(function() {
     $(this).parent().siblings().children('.new-tweet').slideToggle("fast", function() {
       $(this).children('form').children('textarea').focus();

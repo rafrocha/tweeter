@@ -1,17 +1,47 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Oinker (Tweeter) is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Final Product
 
-## Getting Started
+### Initial page
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Screenshot: First Page"](https://github.com/rafrocha/tweeter/blob/master/Screenshots-Oinker/Main%20Page.png?raw=true)
+
+
+### Tweets page, no box displayed. Button "Say it!" toggles the box.
+
+!["Screenshot: Single URL page (Owner only)"](https://github.com/rafrocha/tweeter/blob/master/Screenshots-Oinker/Main%20without%20Oink%20box.png?raw=true)
+
+
+### Mobile version of main page. Delete buttons and other icons appearing. Hover function disabled on mobile.
+
+!["Screenshot: Main URLs List Page"](https://github.com/rafrocha/tweeter/blob/master/Screenshots-Oinker/Mobile%20delete%20button%20appearing%20with%20box.png?raw=true)
+
+
+### Mobile version without Oink box.
+
+!["Mobile shot"](https://github.com/rafrocha/tweeter/blob/master/Screenshots-Oinker/Mobile%20version%20no%20box.png?raw=true)
+
 
 ## Dependencies
 
+- Node.js
 - Express
-- Node 5.10.x or above
+- Moment
+- Dotenv
+- body-parser
+- cookie-session
+- MongoDB
+- Escape HTML
+
+## Getting Started
+
+- App is live through Heroku App @ oinkerapp.herokuapp.com
+- Install all dependencies (using the `npm install` command).
+- Run the development web server using the `node index.js` command.
+
+
+## Functionalities
+
+Single-page app that allows users post a tweet-like comment. User names and tags generated randomly as of now. Tweets are persistent through MongoDB. Login and register functionalities to be added soon.
