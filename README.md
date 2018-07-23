@@ -2,6 +2,8 @@
 
 Oinker (Tweeter) is a simple, single-page Twitter clone.
 
+oinkerapp.herokuapp.com
+
 ## Final Product
 
 ### Initial page
