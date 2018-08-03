@@ -41,7 +41,7 @@ oinkerapp.herokuapp.com
 
 - App is live through Heroku App @ oinkerapp.herokuapp.com
 - Install all dependencies (using the `npm install` command).
-- Run the development web server using the `node index.js` command.
+- Run the development web server using the `npm start` command.
 
 
 ## Functionalities
